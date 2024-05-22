@@ -1,1 +1,20 @@
-<p>{{exemploEstado}}</p>
+<form [formGroup]="formGroup" (ngSubmit)="OnSubmit">
+  <mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput type="text" formControlName="nome">
+    <mat-error *ngIf="formGroup.get('nome') && formGroup.get('nome')?.invalid &&
+      formGroup.get('nome')?.touched">
+      O Nome é obrigatório.
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Sigla</mat-label>
+    <input matInput type="text" formControlName="sigla">
+    <mat-error *ngIf="formGroup.get('sigla') && formGroup.get('sigla')?.invalid &&
+      formGroup.get('sigla')?.touched">
+      A sigla é obrigatório.
+    </mat-error>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit"
+    [disabled]="formGroup.invalid">Salvar</button>
+</form>
