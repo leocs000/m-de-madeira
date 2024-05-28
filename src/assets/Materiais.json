@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "nomeMaterial": "Pinos"
+    },
+    {
+      "id": 2,
+      "nomeMaterial": "Eucalipto"
+    },
+    {
+      "id": 3,
+      "nomeMaterial": "Cedro"
+    },
+    {
+      "id": 4,
+      "nomeMaterial": "Mogno"
+    },
+    {
+      "id": 5,
+      "nomeMaterial": "Ipê"
+    }
+]

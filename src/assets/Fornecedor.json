@@ -1,0 +1,22 @@
+[
+    {
+      "idFornecedor": 1,
+      "nomeFornecedor": "Madeireira Silva"
+    },
+    {
+      "idFornecedor": 2,
+      "nomeFornecedor": "Acabamentos Souza"
+    },
+    {
+      "idFornecedor": 3,
+      "nomeFornecedor": "Materiais Oliveira"
+    },
+    {
+      "idFornecedor": 4,
+      "nomeFornecedor": "Fornecedor Rocha"
+    },
+    {
+      "idFornecedor": 5,
+      "nomeFornecedor": "Distribuidora Almeida"
+    }
+  ]

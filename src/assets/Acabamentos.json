@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "tipoAcabamento": "Verniz"
+    },
+    {
+      "id": 2,
+      "tipoAcabamento": "Polido"
+    },
+    {
+      "id": 3,
+      "tipoAcabamento": "Pintura"
+    },
+    {
+      "id": 4,
+      "tipoAcabamento": "Envernizado"
+    },
+    {
+      "id": 5,
+      "tipoAcabamento": "Bruto"
+    }
+]

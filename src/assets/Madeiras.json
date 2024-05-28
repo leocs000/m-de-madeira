@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "nome": "Madeira de Carvalho",
+      "descricao": "Madeira dura de alta densidade",
+      "largura": 10.5,
+      "comprimento": 200.0,
+      "espessura": 2.5,
+      "cor": "Marrom",
+      "quantidade": 50,
+      "preco": 150.0
+    },
+    {
+      "id": 2,
+      "nome": "Madeira de Pinho",
+      "descricao": "Madeira macia e leve",
+      "largura": 12.0,
+      "comprimento": 250.0,
+      "espessura": 2.0,
+      "cor": "Amarelo Claro",
+      "quantidade": 100,
+      "preco": 100.0
+    },
+    {
+      "id": 3,
+      "nome": "Madeira de Cedro",
+      "descricao": "Madeira aromática de cor avermelhada",
+      "largura": 15.0,
+      "comprimento": 220.0,
+      "espessura": 3.0,
+      "cor": "Vermelho",
+      "quantidade": 75,
+      "preco": 200.0
+    },
+    {
+      "id": 4,
+      "nome": "Madeira de Mogno",
+      "descricao": "Madeira tropical dura e resistente",
+      "largura": 10.0,
+      "comprimento": 180.0,
+      "espessura": 2.8,
+      "cor": "Marrom Escuro",
+      "quantidade": 60,
+      "preco": 180.0
+    },
+    {
+      "id": 5,
+      "nome": "Madeira de Eucalipto",
+      "descricao": "Madeira sustentável e econômica",
+      "largura": 13.0,
+      "comprimento": 240.0,
+      "espessura": 2.2,
+      "cor": "Amarelo",
+      "quantidade": 120,
+      "preco": 90.0
+    }
+]
