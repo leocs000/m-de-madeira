@@ -16,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './estado-list.component.css'
 })
 export class EstadoListComponent implements OnInit{
+  displayedColumns: string[] = ['id', 'nome', 'sigla', 'acao'];
   estados: Estado[] = [];
 
   constructor(private estadoService: EstadoService) {}
