@@ -6,6 +6,8 @@ import { estadoResolver } from './components/estado/resolver/estado.resolver';
 import { MunicipioListComponent } from './components/municipio/municipio-list/municipio-list.component';
 import { MunicipioFormComponent } from './components/municipio/municipio-form/municipio-form.component';
 import { municipioResolver } from './components/municipio/resolver/municipio.resolver';
+import { madeiraResolver } from './components/madeira/resolver/madeira.resolver';
+import { MadeiraFormComponent } from './components/madeira/madeira-form/madeira-form.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: '/madeira', pathMatch: 'full'},
@@ -19,4 +21,6 @@ export const routes: Routes = [
   {path: 'municipios/edit/:id', component: MunicipioFormComponent, resolve: {municipio: municipioResolver}},
 
   {path: 'madeira', component: MadeiraListComponent, title: 'Lista de produtos'},
+  {path: 'madeira/new', component: MadeiraFormComponent, title: 'Novo produto'},
+  {path: 'madeira/edit/:id', component: MadeiraFormComponent, resolve: {madeira: madeiraResolver}},
 ];

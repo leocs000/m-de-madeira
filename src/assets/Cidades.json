@@ -1,0 +1,47 @@
+[
+  {
+    "id": 5,
+    "nome": "Anápolis",
+    "estado": {
+      "id": 2,
+      "nome": "Goiás",
+      "sigla": "GO"
+    }
+  },
+  {
+    "id": 4,
+    "nome": "Goiânia",
+    "estado": {
+      "id": 2,
+      "nome": "Goiás",
+      "sigla": "GO"
+    }
+  },
+  {
+    "id": 3,
+    "nome": "Gurupi",
+    "estado": {
+      "id": 1,
+      "nome": "Tocantins",
+      "sigla": "TO"
+    }
+  },
+  {
+    "id": 1,
+    "nome": "Palmas",
+    "estado": {
+      "id": 1,
+      "nome": "Tocantins",
+      "sigla": "TO"
+    }
+  },
+  {
+    "id": 2,
+    "nome": "Paraíso",
+    "estado": {
+      "id": 1,
+      "nome": "Tocantins",
+      "sigla": "TO"
+    }
+  }
+]

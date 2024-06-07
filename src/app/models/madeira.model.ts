@@ -11,8 +11,9 @@ export class Madeira {
     comprimento!: number;
     espessura!: number;
     cor!: string;
-    quantidade!: number; 
+    quantidade!: number;
     preco!: number;
+    nomeImagem!: string;
     material!: Material;
     tipoCorte!: TipoCorte;
     fornecedor!: Fornecedor;

@@ -8,7 +8,7 @@ import { Estado } from '../models/estado.model';
   providedIn: 'root'
 })
 export class EstadoService {
-  private baseUrl = 'http://localhost:8080/estados'
+  private baseUrl = './assets/Estados.json'
 
   constructor(private httpClient: HttpClient) { }
 

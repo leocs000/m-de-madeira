@@ -21,14 +21,41 @@ export class MadeiraService {
   }
 
   insert(madeira: Madeira): Observable<Madeira>{
-    return this.httpClient.post<Madeira>(this.baseUrl, madeira);
+    const data = {
+      ...madeira,
+      idMaterial: madeira.material.id,
+      idTipoCorte: madeira.tipoCorte.id,
+      idFornecedor: madeira.fornecedor.id,
+      idAcabamento: madeira.acabamento.id
+    }
+    return this.httpClient.post<Madeira>(this.baseUrl, data);
   }
 
   update(madeira: Madeira): Observable<Madeira>{
-    return this.httpClient.put<Madeira>(`${this.baseUrl}/${madeira.id}`, madeira);
+    const data = {
+      ...madeira,
+      idMaterial: madeira.material.id,
+      idTipoCorte: madeira.tipoCorte.id,
+      idFornecedor: madeira.fornecedor.id,
+      idAcabamento: madeira.acabamento.id
+    }
+    return this.httpClient.put<Madeira>(`${this.baseUrl}/${madeira.id}`, data);
   }
 
   delete(madeira: Madeira): Observable<any>{
     return this.httpClient.delete<Madeira>(`${this.baseUrl}/${madeira.id}`);
+  }
+
+  getUrlImagem(nomeImagem: string): string {
+    return `${this.baseUrl}/image/download/${nomeImagem}`;
+  }
+
+  uploadImagem(id: number, nomeImagem: string, imagem: File): Observable<any> {
+    const formData: FormData = new FormData();
+    formData.append('id', id.toString());
+    formData.append('nomeImagem', imagem.name);
+    formData.append('imagem', imagem, imagem.name);
+
+    return this.httpClient.patch<Madeira>(`${this.baseUrl}/image/upload`, formData);
   }
 }

@@ -8,7 +8,23 @@
       "espessura": 2.5,
       "cor": "Marrom",
       "quantidade": 50,
-      "preco": 150.0
+      "preco": 150.0,
+      "material": {
+        "id": 1,
+        "nomeMaterial": "Pinos"
+      },
+      "tipoCorte": {
+        "id": 1,
+        "nomeCorte": "Tábua"
+      },
+      "fornecedor": {
+        "idFornecedor": 1,
+        "nomeFornecedor": "Madeireira Silva"
+      },
+      "acabamento": {
+        "id": 1,
+        "tipoAcabamento": "Verniz"
+      }
     },
     {
       "id": 2,
@@ -19,7 +35,23 @@
       "espessura": 2.0,
       "cor": "Amarelo Claro",
       "quantidade": 100,
-      "preco": 100.0
+      "preco": 100.0,
+      "material": {
+        "id": 1,
+        "nomeMaterial": "Pinos"
+      },
+      "tipoCorte": {
+        "id": 1,
+        "nomeCorte": "Tábua"
+      },
+      "fornecedor": {
+        "idFornecedor": 1,
+        "nomeFornecedor": "Madeireira Silva"
+      },
+      "acabamento": {
+        "id": 1,
+        "tipoAcabamento": "Verniz"
+      }
     },
     {
       "id": 3,
@@ -30,7 +62,23 @@
       "espessura": 3.0,
       "cor": "Vermelho",
       "quantidade": 75,
-      "preco": 200.0
+      "preco": 200.0,
+      "material": {
+        "id": 1,
+        "nomeMaterial": "Pinos"
+      },
+      "tipoCorte": {
+        "id": 1,
+        "nomeCorte": "Tábua"
+      },
+      "fornecedor": {
+        "idFornecedor": 1,
+        "nomeFornecedor": "Madeireira Silva"
+      },
+      "acabamento": {
+        "id": 1,
+        "tipoAcabamento": "Verniz"
+      }
     },
     {
       "id": 4,
@@ -41,7 +89,23 @@
       "espessura": 2.8,
       "cor": "Marrom Escuro",
       "quantidade": 60,
-      "preco": 180.0
+      "preco": 180.0,
+      "material": {
+        "id": 2,
+        "nomeMaterial": "Eucalipto"
+      },
+      "tipoCorte": {
+        "id": 1,
+        "nomeCorte": "Tábua"
+      },
+      "fornecedor": {
+        "idFornecedor": 1,
+        "nomeFornecedor": "Madeireira Silva"
+      },
+      "acabamento": {
+        "id": 1,
+        "tipoAcabamento": "Verniz"
+      }
     },
     {
       "id": 5,
@@ -52,6 +116,22 @@
       "espessura": 2.2,
       "cor": "Amarelo",
       "quantidade": 120,
-      "preco": 90.0
+      "preco": 90.0,
+      "material": {
+        "id": 2,
+        "nomeMaterial": "Eucalipto"
+      },
+      "tipoCorte": {
+        "id": 1,
+        "nomeCorte": "Tábua"
+      },
+      "fornecedor": {
+        "idFornecedor": 1,
+        "nomeFornecedor": "Madeireira Silva"
+      },
+      "acabamento": {
+        "id": 1,
+        "tipoAcabamento": "Verniz"
+      }
     }
 ]

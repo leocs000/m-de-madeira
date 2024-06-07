@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class MunicipioService {
 
-  private baseUrl = 'http://localhost:8080/cidades'
+  private baseUrl = './assets/Cidades.json'
 
   constructor(private httpClient: HttpClient) { }
 

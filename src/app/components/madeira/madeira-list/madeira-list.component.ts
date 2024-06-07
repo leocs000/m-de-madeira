@@ -17,10 +17,11 @@ import { MadeiraService } from '../../../services/madeira.service';
 })
 
 export class MadeiraListComponent implements OnInit{
+  displayedColumns: string[] = ['id', 'produto', 'preco', 'tipoCorte', 'material', 'acao'];
   madeiras: Madeira[] = [];
 
   constructor(private madeiraService: MadeiraService){}
-  
+
   ngOnInit(): void {
     this.madeiraService.findAll().subscribe(data => {
       this.madeiras = data;
