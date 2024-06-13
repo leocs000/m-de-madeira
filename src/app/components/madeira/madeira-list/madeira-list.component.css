@@ -1,31 +1,47 @@
-.toolbar-title{
-  flex: 1;
-  text-align: center;
+.custom-toolbar {
+  background-color: #4CAF50; /* Verde */
+  color: #ffffff; /* Texto branco */
 }
 
-.flex-container{
+.toolbar-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-.mat-column-id{
-  width: 5em;
-  border-right: 1px solid currentColor;
-  padding-right: 244 px;
+.toolbar-title {
+  font-size: 1.5rem;
+  flex: 1;
   text-align: center;
 }
 
-.mat-column-nome{
-  width: 100%;
+.add-button {
+  display: flex;
+  align-items: center;
 }
 
-.mat-column-sigla{
-  text-align: center;
-  width: 5em;
+.mat-header-cell {
+  background-color: #C8E6C9; /* Verde claro para header */
+  color: #000000; /* Texto escuro para header */
+  font-weight: bold;
+  text-align: start;
+  padding-left: 15px;
 }
 
-.mat-column-acao{
-  text-align: center;
-  min-width: 10em;
+.mat-cell {
+  background-color: #FFFFFF; /* Branco para células */
+  color: #000000; /* Texto escuro para células */
+}
+
+.mat-row:nth-child(even) {
+  background-color: #F1F8E9; /* Verde muito claro para linhas pares */
+}
+
+.mat-row:nth-child(odd) {
+  background-color: #FFFFFF; /* Branco para linhas ímpares */
+}
+
+.mat-icon-button {
+  color: #4CAF50; /* Ícones verdes */
 }
