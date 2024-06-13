@@ -51,6 +51,38 @@
           </mat-select>
         </mat-form-field>
 
+        <mat-form-field appearance="fill">
+          <mat-label>Tipo de Corte</mat-label>
+          <mat-select formControlName="tipoCorte">
+            @for (tipoCorte of tiposDeCortes; track tipoCorte.id) {
+            <mat-option [value]="tipoCorte">
+              {{tipoCorte.nomeCorte}}
+            </mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Fornecedor</mat-label>
+          <mat-select formControlName="fornecedor">
+            @for (fornecedor of fornecedores; track fornecedor.id) {
+            <mat-option [value]="fornecedor">
+              {{fornecedor.nomeFornecedor}}
+            </mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Acabamento</mat-label>
+          <mat-select formControlName="acabamento">
+            @for (acabamento of acabamentos; track acabamento.id) {
+            <mat-option [value]="acabamento">
+              {{acabamento.tipoAcabamento}}
+            </mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
       </form>
     </mat-card-content>
     <mat-card-actions>

@@ -13,6 +13,11 @@ import { MaterialService } from '../../../services/material.service';
 import { Material } from '../../../models/material.model';
 import { TipoCorte } from '../../../models/tipo-corte.model';
 import { MatSelectModule } from '@angular/material/select';
+import { TipoCorteService } from '../../../services/tipo-corte.service';
+import { AcabamentoService } from '../../../services/acabamento.service';
+import { FornecedorService } from '../../../services/fornecedor.service';
+import { Fornecedor } from '../../../models/fornecedor.model';
+import { Acabamento } from '../../../models/acabamento.model';
 
 @Component({
   selector: 'app-madeira-form',
@@ -27,10 +32,15 @@ export class MadeiraFormComponent implements OnInit {
   formGroup: FormGroup;
   materiais: Material[] = [];
   tiposDeCortes: TipoCorte[] = [];
+  fornecedores: Fornecedor[] = [];
+  acabamentos: Acabamento[] = [];
 
   constructor(private formBuilder: FormBuilder,
     private madeiraService: MadeiraService,
     private materialService: MaterialService,
+    private tipoCorteService: TipoCorteService,
+    private fornecedorService: FornecedorService,
+    private acabamentoService: AcabamentoService,
     private router: Router,
     private activatedRoute: ActivatedRoute) {
 
@@ -55,14 +65,36 @@ export class MadeiraFormComponent implements OnInit {
   ngOnInit(): void {
     this.materialService.findAll().subscribe(data => {
       this.materiais = data;
-      this.initializeForm
-    })
+    }),
+
+    this.tipoCorteService.findAll().subscribe(data => {
+      this.tiposDeCortes = data;
+    }),
+
+    this.fornecedorService.findAll().subscribe(data => {
+      this.fornecedores = data;
+    }),
+
+    this.acabamentoService.findAll().subscribe(data => {
+      this.acabamentos = data;
+    }),
+
+    this.initializeForm();
   }
   initializeForm() {
     const madeira: Madeira = this.activatedRoute.snapshot.data['madeira'];
 
     const material = this.materiais
       .find(material => material.id === (madeira?.material?.id || null));
+
+    const tipoCorte = this.tiposDeCortes
+      .find(tipoCorte => tipoCorte.id === (madeira?.tipoCorte?.id || null));
+
+    const fornecedor = this.fornecedores
+      .find(fornecedor => fornecedor.id === (madeira?.fornecedor?.id || null));
+
+    const acabamento = this.acabamentos
+      .find(acabamento => acabamento.id === (madeira?.acabamento?.id || null));
 
     this.formGroup = this.formBuilder.group({
       id: [(madeira && madeira.id) ? madeira.id : null],
@@ -75,9 +107,9 @@ export class MadeiraFormComponent implements OnInit {
       quantidade: [(madeira && madeira.quantidade) ? madeira.quantidade : null],
       preco: [(madeira && madeira.preco) ? madeira.preco : null],
       material: [material],
-      tipoCorte: [null],
-      fornecedor: [null],
-      acabamento: [null]
+      tipoCorte: [tipoCorte],
+      fornecedor: [fornecedor],
+      acabamento: [acabamento]
     });
   }
 
