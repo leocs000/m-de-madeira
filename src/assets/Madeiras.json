@@ -18,7 +18,7 @@
         "nomeCorte": "Tábua"
       },
       "fornecedor": {
-        "idFornecedor": 1,
+        "id": 1,
         "nomeFornecedor": "Madeireira Silva"
       },
       "acabamento": {
@@ -45,7 +45,7 @@
         "nomeCorte": "Tábua"
       },
       "fornecedor": {
-        "idFornecedor": 1,
+        "id": 1,
         "nomeFornecedor": "Madeireira Silva"
       },
       "acabamento": {
@@ -72,7 +72,7 @@
         "nomeCorte": "Tábua"
       },
       "fornecedor": {
-        "idFornecedor": 1,
+        "id": 1,
         "nomeFornecedor": "Madeireira Silva"
       },
       "acabamento": {
@@ -99,7 +99,7 @@
         "nomeCorte": "Tábua"
       },
       "fornecedor": {
-        "idFornecedor": 1,
+        "id": 1,
         "nomeFornecedor": "Madeireira Silva"
       },
       "acabamento": {
@@ -126,7 +126,7 @@
         "nomeCorte": "Tábua"
       },
       "fornecedor": {
-        "idFornecedor": 1,
+        "id": 1,
         "nomeFornecedor": "Madeireira Silva"
       },
       "acabamento": {

@@ -21,14 +21,24 @@ export class MadeiraService {
   }
 
   insert(madeira: Madeira): Observable<Madeira>{
+    /*
     const data = {
-      ...madeira,
+      idM: madeira.id,
+      nomeMadeira: madeira.nome,
+      descricaoMadeira: madeira.descricao,
       idMaterial: madeira.material.id,
       idTipoCorte: madeira.tipoCorte.id,
       idFornecedor: madeira.fornecedor.id,
       idAcabamento: madeira.acabamento.id
     }
+    console.log(data);
+    return this.httpClient.post<Madeira>(this.baseUrl, data); */
+
+    const { id, ...data } = madeira;
+
+    console.log(data);
     return this.httpClient.post<Madeira>(this.baseUrl, data);
+
   }
 
   update(madeira: Madeira): Observable<Madeira>{

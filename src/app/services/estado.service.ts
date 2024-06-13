@@ -8,7 +8,8 @@ import { Estado } from '../models/estado.model';
   providedIn: 'root'
 })
 export class EstadoService {
-  private baseUrl = './assets/Estados.json'
+  private baseUrl = 'http://localhost:8080/estados'
+//  private baseUrl = './assets/Estados.json'
 
   constructor(private httpClient: HttpClient) { }
 
@@ -21,10 +22,12 @@ export class EstadoService {
   }
 
   insert(estado: Estado): Observable<Estado>{
+    console.log(estado);
     return this.httpClient.post<Estado>(this.baseUrl, estado);
   }
 
   update(estado: Estado): Observable<Estado>{
+    console.log(estado);
     return this.httpClient.put<Estado>(`${this.baseUrl}/${estado.id}`, estado);
   }
 
