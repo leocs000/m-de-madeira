@@ -120,7 +120,7 @@ export class MadeiraFormComponent implements OnInit {
       if (madeira.id == null) {
         this.madeiraService.insert(madeira).subscribe({
           next: (madeiraCadastrada) => {
-            this.router.navigateByUrl('/madeira');
+            this.router.navigateByUrl('/admin/madeira');
           },
           error: (errorResponse) => {
             console.log('Erro ao incluir' + JSON.stringify(errorResponse));
@@ -129,7 +129,7 @@ export class MadeiraFormComponent implements OnInit {
       } else {
         this.madeiraService.update(madeira).subscribe({
           next: (madeiraAlterada) => {
-            this.router.navigateByUrl('/madeira');
+            this.router.navigateByUrl('/admin/madeira');
           },
           error: (err) => {
             console.log('Erro ao alterar' + JSON.stringify(err));
@@ -146,7 +146,7 @@ export class MadeiraFormComponent implements OnInit {
       if (madeira.id != null) {
         this.madeiraService.delete(madeira).subscribe({
           next: () => {
-            this.router.navigateByUrl('/madeira');
+            this.router.navigateByUrl('/admin/madeira');
           },
           error: (err) => {
             console.log('Erro ao excluir' + JSON.stringify(err));
