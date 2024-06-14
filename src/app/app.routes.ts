@@ -8,19 +8,27 @@ import { MunicipioFormComponent } from './components/municipio/municipio-form/mu
 import { municipioResolver } from './components/municipio/resolver/municipio.resolver';
 import { madeiraResolver } from './components/madeira/resolver/madeira.resolver';
 import { MadeiraFormComponent } from './components/madeira/madeira-form/madeira-form.component';
+import { AdminTemplateComponent } from './components/template/admin-template/admin-template.component';
 
 export const routes: Routes = [
-  {path: '', redirectTo: '/madeira', pathMatch: 'full'},
+  {
+    path: 'admin',
+    component: AdminTemplateComponent,
+    title: 'e-commerce',
+    children: [
+      {path: '', redirectTo: '/madeira', pathMatch: 'full'},
 
-  {path: 'estados', component: EstadoListComponent, title: 'Lista de Estados'},
-  {path: 'estados/new', component: EstadoFormComponent, title: 'Novo Estado'},
-  {path: 'estados/edit/:id', component: EstadoFormComponent, resolve: {estado: estadoResolver}},
+      {path: 'estados', component: EstadoListComponent, title: 'Lista de Estados'},
+      {path: 'estados/new', component: EstadoFormComponent, title: 'Novo Estado'},
+      {path: 'estados/edit/:id', component: EstadoFormComponent, resolve: {estado: estadoResolver}},
 
-  {path: 'municipios', component: MunicipioListComponent, title: 'Lista de municipios'},
-  {path: 'municipios/new', component: MunicipioFormComponent, title: 'Novo municipio'},
-  {path: 'municipios/edit/:id', component: MunicipioFormComponent, resolve: {municipio: municipioResolver}},
+      {path: 'municipios', component: MunicipioListComponent, title: 'Lista de municipios'},
+      {path: 'municipios/new', component: MunicipioFormComponent, title: 'Novo municipio'},
+      {path: 'municipios/edit/:id', component: MunicipioFormComponent, resolve: {municipio: municipioResolver}},
 
-  {path: 'madeira', component: MadeiraListComponent, title: 'Lista de produtos'},
-  {path: 'madeira/new', component: MadeiraFormComponent, title: 'Novo produto'},
-  {path: 'madeira/edit/:id', component: MadeiraFormComponent, resolve: {madeira: madeiraResolver}},
+      {path: 'madeira', component: MadeiraListComponent, title: 'Lista de produtos'},
+      {path: 'madeira/new', component: MadeiraFormComponent, title: 'Novo produto'},
+      {path: 'madeira/edit/:id', component: MadeiraFormComponent, resolve: {madeira: madeiraResolver}},
+    ]
+  } 
 ];

@@ -18,13 +18,14 @@ import { AcabamentoService } from '../../../services/acabamento.service';
 import { FornecedorService } from '../../../services/fornecedor.service';
 import { Fornecedor } from '../../../models/fornecedor.model';
 import { Acabamento } from '../../../models/acabamento.model';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @Component({
   selector: 'app-madeira-form',
   standalone: true,
   imports: [NgIf, ReactiveFormsModule, MatFormFieldModule,
     MatInputModule, MatButtonModule, MatCardModule, MatToolbarModule,
-    RouterModule, MatSelectModule],
+    RouterModule, MatSelectModule, MatAutocompleteModule],
   templateUrl: './madeira-form.component.html',
   styleUrl: './madeira-form.component.css'
 })
